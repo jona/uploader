@@ -1,0 +1,18 @@
+@import "mixins";
+
+.upload-btn{position:relative; display:block;}
+.upload-btn input[type="file"]{position:absolute; top:0; left:0; height:32px; @include opacity(0); cursor:pointer; width:100%;}
+
+[data-uploader='progress-holder']{display:none; position:fixed; bottom:15px; right:0; background:$color-yellow-secondary; @include single-box-shadow(rgba(0,0,0,.3), 0, 1px, 3px); z-index:2}
+[data-uploader='progress-holder'] i{float:left; padding:5px 10px; font-size:32px; -webkit-animation: pulsate 1.5s ease-out; -webkit-animation-iteration-count: infinite; opacity: 1}
+[data-uploader='progress-holder'] > div{font-size:15px; float:left; padding:11px 10px 11px 0;}
+[data-uploader='progress-holder'] a{margin-top:2px; display:block;}
+
+[data-uploader="data"]{display:none; background: #FCF8E3; border:1px solid #FAEBCC; color: #8A6D3B; padding:10px; @include border-radius(3px); word-wrap:break-word;}
+
+.ie-upload{text-align:center; display:none;}
+.ie-upload img{height:20px;}
+.ie-upload h4{font-weight:200; margin-bottom:10px;}
+.normal-upload{display:none;}
+
+@-webkit-keyframes pulsate {0% {opacity: 1;} 50% {opacity: .6;} 100% {opacity: 1;} }
