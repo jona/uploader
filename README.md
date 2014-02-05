@@ -1,10 +1,14 @@
 #Uploader
 
+An add-on for the <a href="https://github.com/waynehoover/s3_direct_upload">s3_direct_upload</a> gem.
+
 ##Installation
 
 You must first add this line to your application's Gemfile:
 
-```gem install s3_direct_upload```
+```ruby 
+gem 's3_direct_upload'
+```
 
 **Note**: To see more in-depth instructions on how to install this gem, go <a href="https://github.com/waynehoover/s3_direct_upload">here</a>.
 
@@ -14,9 +18,10 @@ Add this to your **application.js** file:
 //= require jquery-fileupload/basic
 //= require jquery-fileupload/vendor/tmpl
 ```
-Copy the directory ```include``` and copy it to ```app/assets/javascripts```. 
 
 ##Assets
+
+Copy the directory ```include``` and copy it to ```app/assets/javascripts```. 
 
 Copy the file ```upload.css.scss``` in the css directory to ```app/assets/stylesheets```. 
 
@@ -45,8 +50,10 @@ Wrap the ```s3_uploader_form``` form as shown below:
 ```html
 <div class="btn btn-default upload-btn">
   Browse
-  <%= s3_uploader_form id: "file-upload", data: {:uploader => 'form'}, key: "#{AWS_CONFIG['directory']}/{timestamp}-{unique_id}-#{SecureRandom.hex}.${ext}", key_starts_with: "#{AWS_CONFIG['directory']}/" do %>
+  <%= s3_uploader_form data: {:uploader => 'form'} do %>
     <%= file_field_tag :file, multiple: true %>
   <% end %>
 </div>
 ```
+
+**Note**: Make sure to add ```data: {:uploader => 'form'}``` to your form as shown above.
