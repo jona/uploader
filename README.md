@@ -21,17 +21,19 @@ Add this to your **application.js** file:
 
 ##Assets
 
-Copy the directory ```include``` and copy it to ```app/assets/javascripts```. 
+Copy the following files/directories:
 
-Copy the file ```upload.css.scss``` in the css directory to ```app/assets/stylesheets```. 
+1. ```/include``` **to** ```app/assets/javascripts``` 
 
-Copy the file ```loading.giff``` in the images directory to ```app/assets/images```. 
+2. ```/css/upload.css.scss``` **to** ```app/assets/stylesheets``` 
 
-Copy the ```shared``` directory to ```app/views```. Render it where ever you need it.
+3. ```/images/loading.gif``` **to** ```app/assets/images```
+
+4. ```/shared``` **to** ```app/views```
 
 ##HTML
 
-Use this code where ever you want the ```file name``` and ```file size``` to appear on the page. **Note**: CSS for this element is found in ```upload.css.scss```.
+Use this code where ever you want the ```name``` and ```size``` to appear on the page. **Note**: CSS for this element is found in ```upload.css.scss```.
 
 ```html
 <div data-uploader="data">
