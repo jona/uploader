@@ -43,7 +43,7 @@ class app.Upload
         _self.data_holder_el.find("[data-uploader='name']").html content.filename
         _self.data_holder_el.find("[data-uploader='size']").html numeral(content.filesize).format("0.0b")
 
-      _self.options.success() if _self.options.success
+      _self.options.success(content) if _self.options.success
 
 
     (if BrowserDetect.browser is "Explorer" then $(".ie-upload").show() else $(".normal-upload").show())
