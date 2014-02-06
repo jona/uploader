@@ -41,7 +41,7 @@ Use this code where ever you want the ```name``` and ```size``` to appear on the
 </div>
 ``` 
 
-Using <a href="http://fontawesome.io/">FontAwesome</a>. Include in the you ```head```:
+Using <a href="http://fontawesome.io/">FontAwesome</a>. Include in the ```head``` after the stylesheets include tag:
 
 ```html
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
@@ -58,4 +58,8 @@ Wrap the ```s3_uploader_form``` form as shown below:
 </div>
 ```
 
-**Note**: Make sure to add ```data: {:uploader => 'form'}``` to your form as shown above.
+**Note 1**: Make sure to add ```data: {:uploader => 'form'}``` to your form as shown above. 
+
+**Note 2**: The HTML above uses Twitter bootstrap. To include bootstarp in your project go <a href="https://github.com/jona/start_it_up">here</a>.
+
+
